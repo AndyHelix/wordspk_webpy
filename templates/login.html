@@ -1,0 +1,25 @@
+$def with (form)
+
+$var title: LoginPage
+$var cssfiles:
+$var jsfiles:
+
+<form action="" method='post'>
+$:form.render()
+</form>
+
+<p>Login page</p>
+$code:
+    x = "you can write any python code here"
+    y = x.title()
+    z = len(x+y)
+    def limit(s, width=10):
+        """limits a string to the given width"""
+        if len(s) >= width:
+            return s[:width] + "..."
+        else:
+            return s
+$limit(x, 100)
+<br/>
+$limit(x, 100)
+

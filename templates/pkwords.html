@@ -1,0 +1,23 @@
+$def with (homeuser, awayuser, getword)
+
+$var title: PK words 
+$var cssfiles:
+$var jsfiles:
+$# max = (int(getword[1][5:])-1)*20+100
+
+$if homeuser and awayuser:
+    $if getword:
+        <form action="" method='post'>$getword[3] meaning:[ ]<br/>
+        $for c in getword[4:-1]:
+            <b>$loop.index</b>$c<input class="$loop.parity" type="radio" name="choice" value="$c"><br/>
+        <input type="submit" name="submit" value="提交"><br/>
+        </form>
+        <p>This is $getword[1] for homeuser $homeuser and awayuser $awayuser</p>
+        <p>Have a lot of fun</p>
+    $else:
+        <p> Round Over</p>
+
+$else:
+    <p>No Input player</p>
+
+    <!-- 注意缩进 -->

@@ -1,0 +1,80 @@
+$def with (homeuser, awayuser)
+$#TODO wordform
+
+$var title: PK words 
+$var cssfiles: /static/css/pkwords.css
+$var jsfiles: http://libs.baidu.com/jquery/1.9.0/jquery.js /static/js/nav.js /static/js/geo.js
+<!-- http://maps.google.com/maps/api/js?sensor=false&language=zh-CN -->
+$if homeuser and awayuser:
+    <p>This is round1 for homeuser $homeuser and awayuser $awayuser</p>
+    <p>Have a lot of fun</p>
+    <header>
+        <form>
+            <select>
+            <a href='http://www.zhihu.com'><option value="">zhihu</option></a>
+            <option value=""><a href='http://www.sina.com'>sina</a></option>
+            <option value=""><a href='http://www.163.com'>163</a></option>
+            <option value=""><a href='http://www.baidu.com'>baidu</a></option>
+            </select>
+        </form>
+    </header>
+
+    <section id='round'>
+    <form action="" method='post'>'Hello' meaning:(  )
+        <br/>
+    <b>A. 好事情</b><input type="radio" name="choice" value="1"><br/>
+    <b>B. goood</b>
+    <input type="radio" name="choice" value="2"><br/>
+    <b>C. gooood</b>
+    <input type="radio" name="choice" value="3"><br/>
+    <b>D. nihao</b>
+    <input type="radio" name="choice" value="4"><br/>
+    <input type="submit" name="submit" value="提交"><br/>
+    </form>
+    </section>
+    <div class="sel_wrap">
+    <label>请选择您所在的城市</label>
+    <select class="select" name="" id="c_city">
+    <option value="0">中山市</option>
+    <option value="1">太原市</option>
+    <option value="2">广州市</option>
+    </select>
+    </div>
+    <div id='demo'></div>
+    <button onclick='getLocation()'>ClickOn</button>
+    <div class="site-navigation clearfix">
+        <ul class="clearfix">
+            <li><a href="">My Page1</a></li>
+            <li><a href="">My Page2</a>
+                <ul>
+                    <li><a href="">My Child1</a>
+                        <ul>
+                            <li><a href="">More Chid1</a>
+                                <ul>
+                                    <li><a href="http://www.zhihu.com">Zhihu</a></li>
+                                    <li><a href="http://www.baidu.com">Baidu</a></li>
+                                    <li><a href="http://www.codeacadamy.com">Google</a></li>
+                                    <li><a href="http://www.githu.com">Github</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">More Chid2</a></li>
+                            <li><a href="">More Chid3</a></li>
+                            <li><a href="">More Chid4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">My Child2</a></li>
+                    <li><a href="">My Child3</a></li>
+                    <li><a href="">My Child4</a></li>
+                </ul>
+            </li>
+            <li><a href="">My Page3</a></li>
+            <li><a href="">My Page4</a></li>
+            <li><a href="">My Page5</a></li>
+            <li><a href="">My Page6</a></li>
+        </ul>
+    </div>
+    
+$else:
+    <p>No Input player</p>
+
+    <!-- 注意缩进 -->

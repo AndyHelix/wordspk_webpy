@@ -1,0 +1,14 @@
+$def with (name)
+$var title: $name
+$var cssfiles:
+$var jsfiles:
+$if name:
+    开始今天的修炼咯, $name.
+    <ul>
+        <li>Learning Course:</li>
+        <li>Learned Courses:</li>
+        <li>PK with <a href="/people/leo">Leo</a><a href="/pkwords/${name}_vs_leo_round1"><button type="button">PK</button></a></li>
+    </ul>
+$else:
+    <em>Hello</em>, world!
+

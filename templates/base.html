@@ -1,0 +1,25 @@
+$def with (page)
+$var title: Default Title
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>$page.title</title>
+    $if page.cssfiles:
+        $for f in page.cssfiles.split():
+            <link rel="stylesheet" href="$f" type="text/css" media="screen" charset="utf-8"/>
+</head>
+<body>
+    <p>Study is goodthing</p>
+    $:page
+    <br/>
+    <a href="/reset">Reset Session for Test</a>
+    <footer>
+        Power By Webpy, Created By AndyHelix.
+    </footer>
+    $if page.jsfiles:
+        $for j in page.jsfiles.split():
+            <script src="$j" type="text/javascript" media="screen" charset="utf-8"></script>
+</body>
+</html>
